@@ -5,17 +5,6 @@ from flask import Flask, Response
 
 
 
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-    csp = "default-src 'self'; img-src 'self' https://example.com; frame-src 'self' https://example.com;"
-    return Response(st.render(), headers={"Content-Security-Policy": csp})
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
 #Configuración de la página
 st.set_page_config(page_title='TA Tools - Edades', 
                    page_icon='📊', 
