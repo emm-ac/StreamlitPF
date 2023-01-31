@@ -1,32 +1,15 @@
 import streamlit as st
 import base64
 import os
-from flask import Flask, Response
 
 
 
 #Configuración de la página
 st.set_page_config(page_title='TA Tools - Edades', 
                    page_icon='📊', 
-                   layout="wide", 
+                   layout="centered", 
                    initial_sidebar_state="expanded", 
                    menu_items=None)
-
-
-
-st.markdown(
-    """
-    <style>
-    .iframe-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 
 
@@ -64,3 +47,19 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 show_pdf(path)
+
+
+
+#Código para visualizar PDF de la nube    
+path_web = 'https://github.com/emm-ac/StreamlitPF/blob/8ff593b424c0f44a084ea616f1b644b91e624b35/assets/Analisis.pdf'
+st.markdown(f'<iframe src="{path_web}" width="700" height="700"></iframe>', unsafe_allow_html=True)
+
+path_web2 = 'https://drive.google.com/file/d/1ZTXhWUK8tRgwE79U8jXtSzphUJDCmHdP/view?usp=share_link'
+st.markdown(f'<iframe src="{path_web2}" width="700" height="700"></iframe>', unsafe_allow_html=True)
+
+path_web = 'https://docs.google.com/document/d/1T5kXNatlGFI60dV4AihWUWGGr4ybV2cU/edit?usp=share_link&ouid=110999774945235708227&rtpof=true&sd=true'
+st.markdown(f'<iframe src="{path_web}" width="1000" height="700"></iframe>', unsafe_allow_html=True)
+
+
+
+#https://github.com/emm-ac/StreamlitPF/blob/8ff593b424c0f44a084ea616f1b644b91e624b35/assets/Analisis.pdf
