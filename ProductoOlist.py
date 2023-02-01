@@ -5,7 +5,7 @@ import os
 
 
 #Configuración de la página
-st.set_page_config(page_title='TA Tools - Edades', 
+st.set_page_config(page_title='Proyecto Olist', 
                    page_icon='📊', 
                    layout="centered", 
                    initial_sidebar_state="expanded", 
